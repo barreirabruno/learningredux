@@ -1,10 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
+import './config/reactotron';
+
+import store from './store';
+
+import Routes from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 }
 
